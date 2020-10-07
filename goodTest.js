@@ -4,11 +4,39 @@
 
 // to make a board need to instantiate an object and then do styling on that object with css
 
-// const board = document.createElement('div');
-// board.setAttribute('id,', 'board');
+const boardCell = document.createElement('div');
+const board = document.createElement('div')
+boardCell.innerHTML = `
+                         ____                        
+                        |    |
+                        |____|
+                      `
+
+function makeBoard() {
+    for (i = 0; i < 10; i++) {
+        const boardCell = document.createElement('div');
+        boardCell.innerHTML = `
+                         ____                        
+                        |    |
+                        |____|
+                      `
+        document.body.appendChild(boardCell)
+        boardCell.setAttribute('class', `board${[i]}`)
+    }
+}
+
+makeBoard();
+// const board2 = document.createElement('div');
+// const board3 = document.createElement('div');
+// const board4 = document.createElement('div');
+// const board5 = document.createElement('div');
+// const board6 = document.createElement('div');
+// const board7 = document.createElement('div');
+// const board8 = document.createElement('div');
+board.setAttribute('id', 'board');
 // document.body.appendChild('board')
 // board.innerHTML =   "   |    |     |"
-//                     "-----------------"
+//                     -----------------"
 //                     "   |    |     |"
 //                     "-----------------"
 //                     "   |    |     |"
