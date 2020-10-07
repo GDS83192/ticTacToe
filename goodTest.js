@@ -98,6 +98,70 @@ function userMoves() {
             box1.innerHTML = 'O'
         }
     })
-}
 
+
+    box2.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box2.innerHTML = 'X'
+        } else {
+            box2.innerHTML = 'O'
+        }
+    })
+
+    box3.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box3.innerHTML = 'X'
+        } else {
+            box3.innerHTML = 'O'
+        }
+    })
+
+    box4.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box4.innerHTML = 'X'
+        } else {
+            box4.innerHTML = 'O'
+        }
+    })
+
+    box5.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box5.innerHTML = 'X'
+        } else {
+            box5.innerHTML = 'O'
+        }
+    })
+
+    box6.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box6.innerHTML = 'X'
+        } else {
+            box6.innerHTML = 'O'
+        }
+    })
+
+    box7.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box7.innerHTML = 'X'
+        } else {
+            box7.innerHTML = 'O'
+        }
+    })
+
+    box8.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box8.innerHTML = 'X'
+        } else {
+            box8.innerHTML = 'O'
+        }
+    })
+
+    box9.addEventListener('click', () => {
+        if (player1.symbol == "X") {
+            box9.innerHTML = 'X'
+        } else {
+            box9.innerHTML = 'O'
+        }
+    })
+}
 userMoves();
