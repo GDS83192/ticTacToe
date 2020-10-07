@@ -1,4 +1,4 @@
-/* https://shapeshed.com/default-styles-for-css/#have-classes-for-floating-and-clearing */
+/* /* /* /* https://shapeshed.com/default-styles-for-css/#have-classes-for-floating-and-clearing */
 
 
 /* 
@@ -14,7 +14,8 @@
     float: left;
 } */
 
-html {
+
+/* html {
     background: url('https://cbsnews1.cbsistatic.com/hub/i/r/2011/09/15/30053590-a644-11e2-a3f0-029118418759/thumbnail/1200x630/a745d27d9db98eab550f46fd8bcdcbd8/prudential.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -44,15 +45,16 @@ html {
 
 .boardContainer {
     display: grid;
+    grid-template-rows: 25% 100px auto;
 }
 
 .board1 {
-    display: flex;
+    display: grid;
     justify-content: left;
 }
 
 .board2 {
-    display: flex;
+    display: grid;
     justify-content: left;
 }
 
@@ -62,31 +64,54 @@ html {
 }
 
 .board4 {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
 .board5 {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
 .board6 {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
 .board7 {
-    display: flex;
+    display: grid;
     justify-content: right;
 }
 
 .board8 {
-    display: flex;
+    display: grid;
     justify-content: right;
 }
 
 .board9 {
-    display: flex;
+    display: grid;
     justify-content: right;
+}   */
+
+.game-board {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #34495e;
+    color: #fff;
+    border: 6px solid #2c3e50;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.box {
+    border: 6px solid #2c3e50;
+    border-radius: 2px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

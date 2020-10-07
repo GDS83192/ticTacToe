@@ -1,4 +1,4 @@
-//Research Links
+/* //Research Links
 //https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern?ref=hackernoon.com
 
 
@@ -43,4 +43,4 @@ board.setAttribute('id', 'board');
 //                     -----------------"
 //                     "   |    |     |"
 //                     "-----------------"
-//                     "   |    |     |"
+//                     "   |    |     |" */
