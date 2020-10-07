@@ -42,6 +42,10 @@ html {
     display: flex
 }
 
+.boardContainer {
+    display: grid;
+}
+
 .board1 {
     display: flex;
     justify-content: left;

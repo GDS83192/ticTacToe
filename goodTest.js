@@ -13,6 +13,9 @@ boardCell.innerHTML = `
                       `
 
 function makeBoard() {
+    const board = document.createElement('div');
+    board.setAttribute('class', 'boardContainer')
+    document.body.appendChild(board)
     for (i = 0; i < 10; i++) {
         const boardCell = document.createElement('div');
         boardCell.innerHTML = `
@@ -20,8 +23,9 @@ function makeBoard() {
                         |    |
                         |____|
                       `
-        document.body.appendChild(boardCell)
-        boardCell.setAttribute('class', `board${[i]}`)
+        board.appendChild(boardCell)
+        boardCell.setAttribute('class', 'board')
+        boardCell.setAttribute('id', `board${[i + 1]}`)
     }
 }
 
