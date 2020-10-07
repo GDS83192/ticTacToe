@@ -1,0 +1,3 @@
+1) Make connect 4
+2) Make sound-effects for each time user makes a move
+3) Make different themes not just color schemes
