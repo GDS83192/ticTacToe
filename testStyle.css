@@ -1,0 +1,17 @@
+/* https://shapeshed.com/default-styles-for-css/#have-classes-for-floating-and-clearing */
+
+.clear{
+    clear: both;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.text-center-head{
+font-size: 10;
+}
