@@ -91,12 +91,14 @@ function userMoves() {
     const box8 = document.getElementById('box8')
     const box9 = document.getElementById('box9')
 
+    let turnCounter = 0;
     box1.addEventListener('click', () => {
         if (player1.symbol == "X") {
             box1.innerHTML = 'X'
         } else {
             box1.innerHTML = 'O'
         }
+        turnCounter++
     })
 
 
@@ -106,6 +108,7 @@ function userMoves() {
         } else {
             box2.innerHTML = 'O'
         }
+        turnCounter++
     })
 
     box3.addEventListener('click', () => {
@@ -114,6 +117,7 @@ function userMoves() {
         } else {
             box3.innerHTML = 'O'
         }
+        turnCounter++
     })
 
     box4.addEventListener('click', () => {
@@ -122,6 +126,7 @@ function userMoves() {
         } else {
             box4.innerHTML = 'O'
         }
+        turnCounter++
     })
 
     box5.addEventListener('click', () => {
@@ -130,6 +135,7 @@ function userMoves() {
         } else {
             box5.innerHTML = 'O'
         }
+        turnCounter++
     })
 
     box6.addEventListener('click', () => {
@@ -138,6 +144,8 @@ function userMoves() {
         } else {
             box6.innerHTML = 'O'
         }
+        turnCounter++
+        console.log(turnCounter);
     })
 
     box7.addEventListener('click', () => {
@@ -146,6 +154,7 @@ function userMoves() {
         } else {
             box7.innerHTML = 'O'
         }
+        turnCounter++
     })
 
     box8.addEventListener('click', () => {
@@ -154,6 +163,7 @@ function userMoves() {
         } else {
             box8.innerHTML = 'O'
         }
+        turnCounter++
     })
 
     box9.addEventListener('click', () => {
@@ -162,6 +172,8 @@ function userMoves() {
         } else {
             box9.innerHTML = 'O'
         }
+        turnCounter++
     })
+    console.log(turnCounter);
 }
 userMoves();
