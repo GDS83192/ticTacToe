@@ -1,6 +1,6 @@
 /* //Research Links
-//https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern?ref=hackernoon.com
-
+//1) https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern?ref=hackernoon.com
+//2) https://www.thatsoftwaredude.com/content/6189/coding-tic-tac-toe-in-javascript
 
 // to make a board need to instantiate an object and then do styling on that object with css
 
@@ -45,6 +45,41 @@ board.setAttribute('id', 'board');
 //                     "-----------------"
 //                     "   |    |     |" */
 
+class Player {
+    constructor(name, symbol) {
+        this.name = name
+        this.symbol = symbol
+    }
+}
+
+const player1 = new Player("player1", " ")
+const player2 = new Player("player2", " ")
+
+function choosesSymbol() {
+
+
+    const choosesX = document.getElementById('chooseX')
+    const choosesO = document.getElementById('chooseO')
+
+    choosesX.addEventListener('click', () => {
+
+        player1.name = "player1"
+        player1.symbol = "X"
+        player2.name = "player2"
+        player2.symbol = "O"
+    })
+    choosesO.addEventListener('click', () => {
+        player1.name = "player1"
+        player1.symbol = "O"
+        player2.name = "player2"
+        player2.symbol = "X"
+    })
+
+}
+choosesSymbol();
+
+
+
 function userMoves() {
     const box1 = document.getElementById('box1')
     const box2 = document.getElementById('box2')
@@ -57,7 +92,11 @@ function userMoves() {
     const box9 = document.getElementById('box9')
 
     box1.addEventListener('click', () => {
-        box1.innerHTML = 'X'
+        if (player1.symbol == "X") {
+            box1.innerHTML = 'X'
+        } else {
+            box1.innerHTML = 'O'
+        }
     })
 }
 
