@@ -69,12 +69,14 @@ function choosesSymbol() {
         player1.symbol = "X"
         player2.name = "player2"
         player2.symbol = "O"
+        alert('player 1 goes first!')
     })
     choosesO.addEventListener('click', () => {
         player1.name = "player1"
         player1.symbol = "O"
         player2.name = "player2"
         player2.symbol = "X"
+        alert('player 1 goes first!')
     })
 
 }
@@ -99,7 +101,13 @@ function userMoves() {
 
     let turnCounter = 0;
     box1.addEventListener('click', () => {
+
         if (turnCounter % 2 == 0) {
+            if (turnCounter % 2 == 0) {
+                alert('player 2 turn')
+            } else {
+                alert('player 1 turn')
+            }
             if (player1.symbol == "X") {
                 box1.innerHTML = 'X'
             } else {
@@ -120,6 +128,11 @@ function userMoves() {
 
     box2.addEventListener('click', () => {
         if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
+        if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box2.innerHTML = 'X'
             } else {
@@ -138,6 +151,11 @@ function userMoves() {
 
     box3.addEventListener('click', () => {
         if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
+        if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box3.innerHTML = 'X'
             } else {
@@ -155,6 +173,11 @@ function userMoves() {
     }, { once: true });
     box4.addEventListener('click', () => {
         if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
+        if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box4.innerHTML = 'X'
             } else {
@@ -171,6 +194,11 @@ function userMoves() {
         turnCounter++
     }, { once: true });
     box5.addEventListener('click', () => {
+        if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
         if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box5.innerHTML = 'X'
@@ -190,6 +218,11 @@ function userMoves() {
 
     box6.addEventListener('click', () => {
         if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
+        if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box6.innerHTML = 'X'
             } else {
@@ -207,6 +240,11 @@ function userMoves() {
     }, { once: true });
     box7.addEventListener('click', () => {
         if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
+        if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box7.innerHTML = 'X'
             } else {
@@ -223,6 +261,11 @@ function userMoves() {
         turnCounter++
     }, { once: true });
     box8.addEventListener('click', () => {
+        if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
         if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box8.innerHTML = 'X'
@@ -242,6 +285,11 @@ function userMoves() {
         turnCounter++
     }, { once: true });
     box9.addEventListener('click', () => {
+        if (turnCounter % 2 == 0) {
+            alert('player 2 turn')
+        } else {
+            alert('player 1 turn')
+        }
         if (turnCounter % 2 == 0) {
             if (player1.symbol == "X") {
                 box9.innerHTML = 'X'
@@ -274,11 +322,21 @@ function checkForXWin() {
         (box2.innerHTML == "X" && box5.innerHTML == "X" && box8.innerHTML == "X") || //middle column vertical
         (box3.innerHTML == "X" && box6.innerHTML == "X" && box9.innerHTML == "X") || //end column vertical
         (box1.innerHTML == "X" && box5.innerHTML == "X" && box9.innerHTML == "X") || //diagonal
-        (box3.innerHTML == "X" && box5.innerHTML == "X" && box7.innerHTML == "X") || //diagonal
+        (box3.innerHTML == "X" && box5.innerHTML == "X" && box7.innerHTML == "X")) { //diagonal
 
-
-
-
+        alert('game over, X Wins!')
+        box1.innerHTML = ""
+        box2.innerHTML = ""
+        box3.innerHTML = ""
+        box4.innerHTML = ""
+        box5.innerHTML = ""
+        box6.innerHTML = ""
+        box7.innerHTML = ""
+        box8.innerHTML = ""
+        box9.innerHTML = ""
+        turnCounter = 0
+        userMoves();
+    } else if (
 
         (box1.innerHTML == "O" && box2.innerHTML == "O" && box3.innerHTML == "O") || //top row horizontal
         (box4.innerHTML == "O" && box5.innerHTML == "O" && box6.innerHTML == "O") || //middle row horizontal
@@ -295,7 +353,7 @@ function checkForXWin() {
 
 
 
-        alert('game over')
+        alert('game over, O Wins!')
         box1.innerHTML = ""
         box2.innerHTML = ""
         box3.innerHTML = ""
