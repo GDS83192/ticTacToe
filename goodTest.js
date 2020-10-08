@@ -288,7 +288,7 @@ function checkForXWin() {
         (box2.innerHTML == "O" && box5.innerHTML == "O" && box8.innerHTML == "O") || //middle column vertical
         (box3.innerHTML == "O" && box6.innerHTML == "O" && box9.innerHTML == "O") || //end column vertical
         (box1.innerHTML == "O" && box5.innerHTML == "O" && box9.innerHTML == "O") || //diagonal
-        (box3.innerHTML == "O" && box5.innerHTML == "O" && box7.innerHTML == "O"))
+        (box3.innerHTML == "O" && box5.innerHTML == "O" && box7.innerHTML == "O")) {
 
 
 
@@ -296,6 +296,18 @@ function checkForXWin() {
 
 
         alert('game over')
+        box1.innerHTML = ""
+        box2.innerHTML = ""
+        box3.innerHTML = ""
+        box4.innerHTML = ""
+        box5.innerHTML = ""
+        box6.innerHTML = ""
+        box7.innerHTML = ""
+        box8.innerHTML = ""
+        box9.innerHTML = ""
+        turnCounter = 0
+        userMoves();
+    }
 }
 
 
