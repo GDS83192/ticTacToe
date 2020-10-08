@@ -158,7 +158,7 @@ function userMoves() {
                 box5.innerHTML = 'O'
             }
         } else {
-            box6.innerHTML = "O"
+            box5.innerHTML = "O"
         }
         turnCounter++
     }, { once: true });
@@ -219,13 +219,43 @@ userMoves();
 
 //adding function to check for win
 
-function checkForWin() {
-    if (box1.innerHTML === "X" && box2.innerHTML === "X" && box3.innerHTML === "X") {
+function checkForXWin() {
+    if ((box1.innerHTML == "X" && box2.innerHTML == "X" && box3.innerHTML == "X") || //top row horizontal
+        (box4.innerHTML == "X" && box5.innerHTML == "X" && box6.innerHTML == "X") || //middle row horizontal
+        (box7.innerHTML == "X" && box8.innerHTML == "X" && box9.innerHTML == "X") || //bottom row horizontal
+        (box1.innerHTML == "X" && box4.innerHTML == "X" && box7.innerHTML == "X") || //first column vertical
+
+        (box2.innerHTML == "X" && box5.innerHTML == "X" && box8.innerHTML == "X") || //middle column vertical
+        (box3.innerHTML == "X" && box6.innerHTML == "X" && box9.innerHTML == "X") || //end column vertical
+        (box1.innerHTML == "X" && box5.innerHTML == "X" && box9.innerHTML == "X") || //diagonal
+        (box3.innerHTML == "X" && box5.innerHTML == "X" && box7.innerHTML == "X") || //diagonal
+
+
+
+
+
+        (box1.innerHTML == "O" && box2.innerHTML == "O" && box3.innerHTML == "O") || //top row horizontal
+        (box4.innerHTML == "O" && box5.innerHTML == "O" && box6.innerHTML == "O") || //middle row horizontal
+        (box7.innerHTML == "O" && box8.innerHTML == "O" && box9.innerHTML == "O") || //bottom row horizontal
+        (box1.innerHTML == "O" && box4.innerHTML == "O" && box7.innerHTML == "O") || //first column vertical
+
+        (box2.innerHTML == "O" && box5.innerHTML == "O" && box8.innerHTML == "O") || //middle column vertical
+        (box3.innerHTML == "O" && box6.innerHTML == "O" && box9.innerHTML == "O") || //end column vertical
+        (box1.innerHTML == "O" && box5.innerHTML == "O" && box9.innerHTML == "O") || //diagonal
+        (box3.innerHTML == "O" && box5.innerHTML == "O" && box7.innerHTML == "O"))
+
+
+
+
+
+
         alert('game over')
-    }
 }
 
-setInterval(checkForWin, 100);
+
+
+setInterval(checkForXWin, 100);
+
 console.log(box1.innerHTML);
 console.log(box2.innerHTML);
 console.log(box3.innerHTML);
