@@ -237,7 +237,7 @@ function userMoves() {
                 box8.innerHTML = 'X'
             }
         }
-        box8.innerHTML = "O"
+
 
         turnCounter++
     }, { once: true });
@@ -307,13 +307,25 @@ function checkForXWin() {
         box9.innerHTML = ""
         turnCounter = 0
         userMoves();
+    } else if (
+        box1.innerHTML !== "" && box2.innerHTML !== "" && box3.innerHTML !== "" && box4.innerHTML !== "" && box5.innerHTML !== "" && box6.innerHTML !== "" && box7.innerHTML !== "" && box8.innerHTML !== "" && box9.innerHTML !== ""
+    ) {
+        alert('game over, its a tie!')
+        box1.innerHTML = ""
+        box2.innerHTML = ""
+        box3.innerHTML = ""
+        box4.innerHTML = ""
+        box5.innerHTML = ""
+        box6.innerHTML = ""
+        box7.innerHTML = ""
+        box8.innerHTML = ""
+        box9.innerHTML = ""
+        turnCounter = 0
+        userMoves();
     }
 }
 
 
 
-setInterval(checkForXWin, 100);
 
-console.log(box1.innerHTML);
-console.log(box2.innerHTML);
-console.log(box3.innerHTML);
+setInterval(checkForXWin, 100);
