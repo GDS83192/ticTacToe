@@ -93,6 +93,10 @@ function userMoves() {
     const box8 = document.getElementById('box8')
     const box9 = document.getElementById('box9')
 
+
+
+
+
     let turnCounter = 0;
     box1.addEventListener('click', () => {
         if (turnCounter % 2 == 0) {
@@ -190,6 +194,7 @@ function userMoves() {
             } else {
                 box8.innerHTML = 'O'
             }
+
         } else {
             box8.innerHTML = "O"
         }
@@ -207,5 +212,20 @@ function userMoves() {
         }
         turnCounter++
     }, { once: true });
+
+
 }
 userMoves();
+
+//adding function to check for win
+
+function checkForWin() {
+    if (box1.innerHTML === "X" && box2.innerHTML === "X" && box3.innerHTML === "X") {
+        alert('game over')
+    }
+}
+
+setInterval(checkForWin, 100);
+console.log(box1.innerHTML);
+console.log(box2.innerHTML);
+console.log(box3.innerHTML);
