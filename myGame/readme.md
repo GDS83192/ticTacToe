@@ -9,7 +9,8 @@ This TicTacToe game solves the problem of two people desiring a friendly competi
 
 ### This could be a screenshot of your project running in the browser (if it is a stand-alone application)
 
-! [screenshot of game running in browser] (/Users/grahamsquires/sei/projects/ticTacToe/myGame/Screen Shot 2020-10-08 at 3.13.58 PM.png)
+![screenshot](myGame/gameScreenshot.png)
+
 # List of Features / User Stories
 
 ## This typically will be a short list of the features / user stories that you planned during the development phase of the project
