@@ -105,8 +105,13 @@ function userMoves() {
             } else {
                 box1.innerHTML = 'O'
             }
-        } else {
-            box1.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box1.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box1.innerHTML = 'O'
+            } else {
+                box1.innerHTML = 'X'
+            }
         }
         turnCounter++
 
@@ -120,8 +125,13 @@ function userMoves() {
             } else {
                 box2.innerHTML = 'O'
             }
-        } else {
-            box2.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box2.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box2.innerHTML = 'O'
+            } else {
+                box2.innerHTML = 'X'
+            }
         }
         turnCounter++
     }, { once: true });
@@ -133,8 +143,13 @@ function userMoves() {
             } else {
                 box3.innerHTML = 'O'
             }
-        } else {
-            box3.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box3.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box3.innerHTML = 'O'
+            } else {
+                box3.innerHTML = 'X'
+            }
         }
         turnCounter++
     }, { once: true });
@@ -145,8 +160,13 @@ function userMoves() {
             } else {
                 box4.innerHTML = 'O'
             }
-        } else {
-            box4.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box4.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box4.innerHTML = 'O'
+            } else {
+                box4.innerHTML = 'X'
+            }
         }
         turnCounter++
     }, { once: true });
@@ -157,8 +177,13 @@ function userMoves() {
             } else {
                 box5.innerHTML = 'O'
             }
-        } else {
-            box5.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box5.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box5.innerHTML = 'O'
+            } else {
+                box5.innerHTML = 'X'
+            }
         }
         turnCounter++
     }, { once: true });
@@ -170,8 +195,13 @@ function userMoves() {
             } else {
                 box6.innerHTML = 'O'
             }
-        } else {
-            box6.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box6.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box6.innerHTML = 'O'
+            } else {
+                box6.innerHTML = 'X'
+            }
         }
         turnCounter++
     }, { once: true });
@@ -182,8 +212,13 @@ function userMoves() {
             } else {
                 box7.innerHTML = 'O'
             }
-        } else {
-            box7.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box7.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box7.innerHTML = 'O'
+            } else {
+                box7.innerHTML = 'X'
+            }
         }
         turnCounter++
     }, { once: true });
@@ -194,10 +229,16 @@ function userMoves() {
             } else {
                 box8.innerHTML = 'O'
             }
-
-        } else {
-            box8.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box8.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box8.innerHTML = 'O'
+            } else {
+                box8.innerHTML = 'X'
+            }
         }
+        box8.innerHTML = "O"
+
         turnCounter++
     }, { once: true });
     box9.addEventListener('click', () => {
@@ -207,8 +248,13 @@ function userMoves() {
             } else {
                 box9.innerHTML = 'O'
             }
-        } else {
-            box9.innerHTML = "O"
+        } else if (turnCounter % 2 !== 0) {
+            // box9.innerHTML = "O"
+            if (player1.symbol == "X") {
+                box9.innerHTML = 'O'
+            } else {
+                box9.innerHTML = 'X'
+            }
         }
         turnCounter++
     }, { once: true });
