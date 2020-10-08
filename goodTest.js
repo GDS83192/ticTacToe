@@ -1,6 +1,8 @@
 /* //Research Links
 //1) https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern?ref=hackernoon.com
 //2) https://www.thatsoftwaredude.com/content/6189/coding-tic-tac-toe-in-javascript
+//3) https://eloquentjavascript.net/15_event.html' -- Got Remove Event Listener from this.
+//4) https://stackoverflow.com/questions/28610365/how-can-i-add-an-event-for-a-one-time-click-to-a-function -- From this got {once: true}
 
 // to make a board need to instantiate an object and then do styling on that object with css
 
@@ -93,87 +95,117 @@ function userMoves() {
 
     let turnCounter = 0;
     box1.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box1.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box1.innerHTML = 'X'
+            } else {
+                box1.innerHTML = 'O'
+            }
         } else {
-            box1.innerHTML = 'O'
+            box1.innerHTML = "O"
         }
         turnCounter++
-    })
+
+    }, { once: true });
 
 
     box2.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box2.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box2.innerHTML = 'X'
+            } else {
+                box2.innerHTML = 'O'
+            }
         } else {
-            box2.innerHTML = 'O'
+            box2.innerHTML = "O"
         }
         turnCounter++
-    })
+    }, { once: true });
 
     box3.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box3.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box3.innerHTML = 'X'
+            } else {
+                box3.innerHTML = 'O'
+            }
         } else {
-            box3.innerHTML = 'O'
+            box3.innerHTML = "O"
         }
         turnCounter++
-    })
-
+    }, { once: true });
     box4.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box4.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box4.innerHTML = 'X'
+            } else {
+                box4.innerHTML = 'O'
+            }
         } else {
-            box4.innerHTML = 'O'
+            box4.innerHTML = "O"
         }
         turnCounter++
-    })
-
+    }, { once: true });
     box5.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box5.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box5.innerHTML = 'X'
+            } else {
+                box5.innerHTML = 'O'
+            }
         } else {
-            box5.innerHTML = 'O'
+            box6.innerHTML = "O"
         }
         turnCounter++
-    })
+    }, { once: true });
 
     box6.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box6.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box6.innerHTML = 'X'
+            } else {
+                box6.innerHTML = 'O'
+            }
         } else {
-            box6.innerHTML = 'O'
+            box6.innerHTML = "O"
         }
         turnCounter++
-        console.log(turnCounter);
-    })
-
+    }, { once: true });
     box7.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box7.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box7.innerHTML = 'X'
+            } else {
+                box7.innerHTML = 'O'
+            }
         } else {
-            box7.innerHTML = 'O'
+            box7.innerHTML = "O"
         }
         turnCounter++
-    })
-
+    }, { once: true });
     box8.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box8.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box8.innerHTML = 'X'
+            } else {
+                box8.innerHTML = 'O'
+            }
         } else {
-            box8.innerHTML = 'O'
+            box8.innerHTML = "O"
         }
         turnCounter++
-    })
-
+    }, { once: true });
     box9.addEventListener('click', () => {
-        if (player1.symbol == "X") {
-            box9.innerHTML = 'X'
+        if (turnCounter % 2 == 0) {
+            if (player1.symbol == "X") {
+                box9.innerHTML = 'X'
+            } else {
+                box9.innerHTML = 'O'
+            }
         } else {
-            box9.innerHTML = 'O'
+            box9.innerHTML = "O"
         }
         turnCounter++
-    })
-    console.log(turnCounter);
+    }, { once: true });
 }
 userMoves();
