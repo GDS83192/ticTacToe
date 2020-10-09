@@ -54,43 +54,59 @@ class Player {
     }
 }
 
-const player1 = new Player("player1", " ")
-const player2 = new Player("player2", " ")
+const player1 = new Player("player1", "X")
+const player2 = new Player("player2", "O")
 
-function choosesSymbol() {
+// function choosesSymbol() {
 
 
-    const choosesX = document.getElementById('chooseX')
-    const choosesO = document.getElementById('chooseO')
+//     const choosesX = document.getElementById('chooseX')
+//     const choosesO = document.getElementById('chooseO')
 
-    choosesX.addEventListener('click', () => {
+//     choosesX.addEventListener('click', () => {
+//         if (event.target == choosesO) {
+//             player1.name = "player1"
+//             player1.symbol = "O"
+//             player2.name = "player2"
+//             player2.symbol = "X"
+//             alert('player 1 goes first!')
+//         } else
+//             player1.name = "player1"
+//         player1.symbol = "X"
+//         player2.name = "player2"
+//         player2.symbol = "O"
+//         alert('player 1 goes first!')
+//     }, { once: true });
 
-        player1.name = "player1"
-        player1.symbol = "X"
-        player2.name = "player2"
-        player2.symbol = "O"
-        alert('player 1 goes first!')
-    }, { once: true });
-    choosesO.addEventListener('click', () => {
-        player1.name = "player1"
-        player1.symbol = "O"
-        player2.name = "player2"
-        player2.symbol = "X"
-        alert('player 1 goes first!')
-    }, { once: true });
 
-}
-choosesSymbol();
+//     choosesO.addEventListener('click', () => {
+//         if (choosesX()) {
+//             player1.name = "player1"
+//             player1.symbol = "X"
+//             player2.name = "player2"
+//             player2.symbol = "O"
+//             alert('player 1 goes first!')
+//         } else {
+//             player1.name = "player1"
+//             player1.symbol = "O"
+//             player2.name = "player2"
+//             player2.symbol = "O"
+//             alert('player 1 goes first!')
+//         }
+//     }, { once: true });
+// }
+
+// choosesSymbol();
 
 //Need to find out if it's a bad idea to put all event listeners and all these variables inside a function. MVP is complete and will review scope to make this better
 
 
-const checkForSym = document.querySelector('.game-board')
-const symCheck = () => {
-    if (player1.symbol == " ") {
-        alert('please choose x or o')
-    }
-}
+// const checkForSym = document.querySelector('.game-board')
+// const symCheck = () => {
+//     if (player1.symbol == " ") {
+//         alert('please choose x or o')
+//     }
+// }
 
 function userMoves() {
 
