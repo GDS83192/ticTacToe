@@ -70,14 +70,14 @@ function choosesSymbol() {
         player2.name = "player2"
         player2.symbol = "O"
         alert('player 1 goes first!')
-    })
+    }, { once: true });
     choosesO.addEventListener('click', () => {
         player1.name = "player1"
         player1.symbol = "O"
         player2.name = "player2"
         player2.symbol = "X"
         alert('player 1 goes first!')
-    })
+    }, { once: true });
 
 }
 choosesSymbol();
