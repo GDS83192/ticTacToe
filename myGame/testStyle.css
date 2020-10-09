@@ -126,3 +126,18 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+.left {
+    font-size: 2em;
+}
+
+.text-center-head {
+    font-size: 3em;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+#mainHeading {
+    font-family: 'Sansita Swashed', cursive;
+    text-align: center;
+    font-size: 6em;
+}
