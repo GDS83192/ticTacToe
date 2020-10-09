@@ -93,218 +93,221 @@ const symCheck = () => {
 }
 
 function userMoves() {
-
-    const box1 = document.getElementById('box1')
-    const box2 = document.getElementById('box2')
-    const box3 = document.getElementById('box3')
-    const box4 = document.getElementById('box4')
-    const box5 = document.getElementById('box5')
-    const box6 = document.getElementById('box6')
-    const box7 = document.getElementById('box7')
-    const box8 = document.getElementById('box8')
-    const box9 = document.getElementById('box9')
-
-
-
-    let turnCounter = 0;
+    if (symCheck) {
+        const box1 = document.getElementById('box1')
+        const box2 = document.getElementById('box2')
+        const box3 = document.getElementById('box3')
+        const box4 = document.getElementById('box4')
+        const box5 = document.getElementById('box5')
+        const box6 = document.getElementById('box6')
+        const box7 = document.getElementById('box7')
+        const box8 = document.getElementById('box8')
+        const box9 = document.getElementById('box9')
 
 
-    const trackTurnFunc = () => {
-        const guiCountTrack = document.createElement('div')
-        guiCountTrack.setAttribute('class', 'tracker')
-        document.body.appendChild(guiCountTrack)
-        if (turnCounter % 2 == 0) {
-            guiCountTrack.innerHTML = "Player 1's Turn"
 
-        } else {
-            guiCountTrack.innerHTML = "Player 2's turn"
+        let turnCounter = 1;
+
+
+        const trackTurnFunc = () => {
+            const guiCountTrack = document.createElement('div')
+            const allTracker = document.querySelectorAll('.tracker')
+            const allTrackerArray = Array.from(allTracker)
+            guiCountTrack.setAttribute('class', 'tracker')
+            document.body.appendChild(guiCountTrack)
+            if (turnCounter % 2 == 0) {
+                guiCountTrack.innerHTML = 'Player 1 Turn'
+                console.log(allTrackerArray);
+                allTrackerArray[turnCounter - 1].innerHTML = ""
+            } else {
+                guiCountTrack.innerHTML = "Player 2 turn"
+            }
         }
+
+
+
+        box1.addEventListener('click', () => {
+
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box1.innerHTML = 'X'
+                } else {
+                    box1.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box1.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box1.innerHTML = 'O'
+                } else {
+                    box1.innerHTML = 'X'
+                }
+
+            }
+            turnCounter++
+            trackTurnFunc();
+
+        }, { once: true });
+
+
+        box2.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box2.innerHTML = 'X'
+                } else {
+                    box2.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box2.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box2.innerHTML = 'O'
+                } else {
+                    box2.innerHTML = 'X'
+                }
+            }
+            turnCounter++
+            trackTurnFunc();
+        }, { once: true });
+
+        box3.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box3.innerHTML = 'X'
+                } else {
+                    box3.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box3.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box3.innerHTML = 'O'
+                } else {
+                    box3.innerHTML = 'X'
+                }
+            }
+            turnCounter++
+            trackTurnFunc()
+        }, { once: true });
+        box4.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box4.innerHTML = 'X'
+                } else {
+                    box4.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box4.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box4.innerHTML = 'O'
+                } else {
+                    box4.innerHTML = 'X'
+                }
+            }
+            turnCounter++
+            trackTurnFunc()
+        }, { once: true });
+        box5.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box5.innerHTML = 'X'
+                } else {
+                    box5.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box5.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box5.innerHTML = 'O'
+                } else {
+                    box5.innerHTML = 'X'
+                }
+            }
+            turnCounter++
+            trackTurnFunc()
+        }, { once: true });
+
+        box6.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box6.innerHTML = 'X'
+                } else {
+                    box6.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box6.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box6.innerHTML = 'O'
+                } else {
+                    box6.innerHTML = 'X'
+                }
+            }
+            turnCounter++
+            trackTurnFunc()
+        }, { once: true });
+        box7.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box7.innerHTML = 'X'
+                } else {
+                    box7.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box7.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box7.innerHTML = 'O'
+                } else {
+                    box7.innerHTML = 'X'
+                }
+            }
+            turnCounter++
+            trackTurnFunc()
+        }, { once: true });
+        box8.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box8.innerHTML = 'X'
+                } else {
+                    box8.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box8.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box8.innerHTML = 'O'
+                } else {
+                    box8.innerHTML = 'X'
+                }
+            }
+
+
+            turnCounter++
+            trackTurnFunc()
+        }, { once: true });
+        box9.addEventListener('click', () => {
+
+            if (turnCounter % 2 == 0) {
+                if (player1.symbol == "X") {
+                    box9.innerHTML = 'X'
+                } else {
+                    box9.innerHTML = 'O'
+                }
+            } else if (turnCounter % 2 !== 0) {
+                // box9.innerHTML = "O"
+                if (player1.symbol == "X") {
+                    box9.innerHTML = 'O'
+                } else {
+                    box9.innerHTML = 'X'
+                }
+            }
+            turnCounter++
+            trackTurnFunc()
+        }, { once: true });
+
     }
-
-
-
-    box1.addEventListener('click', () => {
-
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box1.innerHTML = 'O'
-            } else {
-                box1.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box1.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box1.innerHTML = 'X'
-            } else {
-                box1.innerHTML = 'O'
-            }
-
-        }
-        turnCounter++
-        trackTurnFunc();
-
-    }, { once: true });
-
-
-    box2.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box2.innerHTML = 'O'
-            } else {
-                box2.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box2.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box2.innerHTML = 'X'
-            } else {
-                box2.innerHTML = 'O'
-            }
-        }
-        turnCounter++
-        trackTurnFunc();
-    }, { once: true });
-
-    box3.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box3.innerHTML = 'O'
-            } else {
-                box3.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box3.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box3.innerHTML = 'X'
-            } else {
-                box3.innerHTML = 'O'
-            }
-        }
-        turnCounter++
-        trackTurnFunc()
-    }, { once: true });
-    box4.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box4.innerHTML = 'O'
-            } else {
-                box4.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box4.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box4.innerHTML = 'X'
-            } else {
-                box4.innerHTML = 'O'
-            }
-        }
-        turnCounter++
-        trackTurnFunc()
-    }, { once: true });
-    box5.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box5.innerHTML = 'O'
-            } else {
-                box5.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box5.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box5.innerHTML = 'X'
-            } else {
-                box5.innerHTML = 'O'
-            }
-        }
-        turnCounter++
-        trackTurnFunc()
-    }, { once: true });
-
-    box6.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box6.innerHTML = 'O'
-            } else {
-                box6.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box6.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box6.innerHTML = 'X'
-            } else {
-                box6.innerHTML = 'O'
-            }
-        }
-        turnCounter++
-        trackTurnFunc()
-    }, { once: true });
-    box7.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box7.innerHTML = 'O'
-            } else {
-                box7.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box7.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box7.innerHTML = 'X'
-            } else {
-                box7.innerHTML = 'O'
-            }
-        }
-        turnCounter++
-        trackTurnFunc()
-    }, { once: true });
-    box8.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box8.innerHTML = 'O'
-            } else {
-                box8.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box8.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box8.innerHTML = 'X'
-            } else {
-                box8.innerHTML = 'O'
-            }
-        }
-
-
-        turnCounter++
-        trackTurnFunc()
-    }, { once: true });
-    box9.addEventListener('click', () => {
-
-        if (turnCounter % 2 == 0) {
-            if (player1.symbol == "O") {
-                box9.innerHTML = 'O'
-            } else {
-                box9.innerHTML = 'X'
-            }
-        } else if (turnCounter % 2 !== 0) {
-            // box9.innerHTML = "O"
-            if (player1.symbol == "O") {
-                box9.innerHTML = 'X'
-            } else {
-                box9.innerHTML = 'O'
-            }
-        }
-        turnCounter++
-        trackTurnFunc()
-    }, { once: true });
-
-
 }
 userMoves();
 
