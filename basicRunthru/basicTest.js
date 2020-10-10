@@ -35,6 +35,7 @@ function check(array) {
 }
 
 function winnerPlayer(p) {
+    //This function is for the animaton at end that shows who won
     const modal = document.createElement('div');
     console.log(modal);
     const player = document.createTextNode(p);
