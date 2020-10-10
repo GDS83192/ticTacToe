@@ -141,3 +141,8 @@ html {
     text-align: center;
     font-size: 6em;
 }
+
+#startButton {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 3em;
+}
