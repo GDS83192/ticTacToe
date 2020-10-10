@@ -76,7 +76,7 @@ const fillInBoxes = () => {
 let counter = 0
 
 indBoxes.forEach(box => {
-    console.log(indBoxes);
+
     box.addEventListener('click', fillInBoxes, { once: true })
     box.addEventListener('click', event => {
         if (counter % 2 == 0) {
@@ -99,30 +99,53 @@ startButton.addEventListener('click', startGame)
 let gameState = [];
 
 const winCheckTrack = () => {
+
+
+
+
+
+
     gameState.push(event.target.innerHTML)
-    if ((gameState[0] === "X" && gameState[1] === "X" && gameState[2] === "X") ||
-        (gameState[3] === "X" && gameState[4] === "X" && gameState[5] === "X") ||
-        (gameState[6] === "X" && gameState[7] === "X" && gameState[8] === "X") ||
-        (gameState[0] === "X" && gameState[4] === "X" && gameState[6] === "X") ||
-        (gameState[1] === "X" && gameState[5] === "X" && gameState[7] === "X") ||
-        (gameState[2] === "X" && gameState[6] === "X" && gameState[8] === "X") ||
-        (gameState[0] === "X" && gameState[4] === "X" && gameState[8] === "X") ||
-        (gameState[0] === "X" && gameState[2] === "X" && gameState[4] === "X") ||
-        (gameState[2] === "X" && gameState[4] === "X" && gameState[6] === "X"))
+
+    if ((gameBoxes[0].innerHTML === "X" && gameBoxes[1].innerHTML === "X" && gameBoxes[2].innerHTML === "X") ||
+        (gameBoxes[3].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[5].innerHTML === "X") ||
+        (gameBoxes[6].innerHTML === "X" && gameBoxes[7].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
+        (gameBoxes[0].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[6].innerHTML === "X") ||
+        (gameBoxes[1].innerHTML === "X" && gameBoxes[5].innerHTML === "X" && gameBoxes[7].innerHTML === "X") ||
+        (gameBoxes[2].innerHTML === "X" && gameBoxes[6].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
+        (gameBoxes[0].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
+        (gameBoxes[0].innerHTML === "X" && gameBoxes[5].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
+        (gameBoxes[2].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[6].innerHTML === "X"))
 
 
     {
         alert("game over X wins!")
-        gameBoxes.forEach(box => {
-            box.innerHTML = " "
-            counterDiv.innerHTML = ""
-        })
         counter = 0
+    } else if ((gameBoxes[0] === "O" && gameBoxes[1] === "O" && gameBoxes[2] === "O") ||
+        (gameBoxes[3].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[5].innerHTML === "O") ||
+        (gameBoxes[6].innerHTML === "O" && gameBoxes[7].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
+        (gameBoxes[0].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[6].innerHTML === "O") ||
+        (gameBoxes[1].innerHTML === "O" && gameBoxes[5].innerHTML === "O" && gameBoxes[7].innerHTML === "O") ||
+        (gameBoxes[2].innerHTML === "O" && gameBoxes[6].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
+        (gameBoxes[0].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
+        (gameBoxes[0].innerHTML === "O" && gameBoxes[2].innerHTML === "O" && gameBoxes[4].innerHTML === "O") ||
+        (gameBoxes[2].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[6].innerHTML === "O"))
+
+
+    {
+        alert("game over O wins!")
+            // gameBoxes.forEach(box => {
+        gameBoxes.forEach(box => {
+            box.innerHTML = ""
+            counterDiv.innerHTML = ""
+            gameState = []
+        })
+
     }
 }
 indBoxes.forEach(box => {
 
     box.addEventListener('click', winCheckTrack)
-    console.log(gameState);
+
 
 })
