@@ -13,13 +13,14 @@ const player1 = new Player('player1,', 'X')
 const gameBoxes = document.querySelectorAll('.gameBox') //Individual Game Boxes Object
 const counterDiv = document.querySelector('#counterDiv'); //Div for Turn tracking
 const board = document.querySelector('.boardGrid'); //For selecting entire board
-const startButton = document.querySelector('.startButton'); //Start Button
+const startButton = document.querySelector('#startButton'); //Start Button
 const chooseX = document.querySelector('#chooseX') //X button
 const chooseO = document.querySelector('#chooseO') //O button
 const choiceButtons = document.querySelectorAll('.XorObutton'); //Selector for both buttons
 const indBoxes = Array.from(document.querySelectorAll('.gameBox')) // Individual Game boxes array
 
 
+let counter = 0
 
 const startGame = () => { // click Start. Says "Begin!" if new game indicated by counter at 0, otherwise alerts game is already underway
     if (counter == 0) {
@@ -29,9 +30,6 @@ const startGame = () => { // click Start. Says "Begin!" if new game indicated by
         alert('Game is already underway')
     }
 }
-
-
-
 
 
 
@@ -50,35 +48,10 @@ const fillInBoxes = () => {
 
         } else if (player1.symbol == "O" && event.target.innerHTML == "") {
             event.target.innerHTML = "O"
-
         }
     }
     counter++
-
 }
-
-let counter = 0
-
-indBoxes.forEach(box => {
-
-    box.addEventListener('click', fillInBoxes)
-    box.addEventListener('click', event => {
-        if (counter % 2 == 0) {
-            counterDiv.innerHTML = "Player 1 Turn"
-
-        } else if (counter % 2 !== 0) {
-            counterDiv.innerHTML = "Player 2 Turn"
-        }
-
-    })
-})
-
-// gameBox.addEventListener('click', clickBox)
-// gameBox.addEventListener('click', moveTracker)
-// gameBox.addEventListener('click', counterUp)
-// 
-// });
-startButton.addEventListener('click', startGame)
 
 
 const winCheckTrack = () => {
@@ -91,10 +64,7 @@ const winCheckTrack = () => {
         (gameBoxes[1].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[7].innerHTML === "X") ||
         (gameBoxes[2].innerHTML === "X" && gameBoxes[6].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
         (gameBoxes[0].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
-        (gameBoxes[2].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[6].innerHTML === "X"))
-
-
-    {
+        (gameBoxes[2].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[6].innerHTML === "X")) {
         alert("game over X wins!")
         gameBoxes.forEach(box => {
             box.innerHTML = ""
@@ -111,7 +81,6 @@ const winCheckTrack = () => {
         (gameBoxes[2].innerHTML === "O" && gameBoxes[6].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
         (gameBoxes[0].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
         (gameBoxes[2].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[6].innerHTML === "O"))
-
 
     {
         alert("game over O wins!")
@@ -132,9 +101,22 @@ const winCheckTrack = () => {
     }
 
 }
+
 indBoxes.forEach(box => {
 
+    box.addEventListener('click', fillInBoxes)
+    box.addEventListener('click', event => {
+        if (counter % 2 == 0) {
+            counterDiv.innerHTML = "Player 1 Turn"
+
+        } else if (counter % 2 !== 0) {
+            counterDiv.innerHTML = "Player 2 Turn"
+        }
+    })
+})
+
+startButton.addEventListener('click', startGame)
+
+indBoxes.forEach(box => {
     box.addEventListener('click', winCheckTrack)
-
-
 })

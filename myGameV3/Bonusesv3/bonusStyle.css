@@ -48,6 +48,8 @@ html {
 #startButton {
     font-family: 'Sansita Swashed', cursive;
     font-size: 3em;
+    margin-left: 100px;
+    color: blue;
 }
 
 #counterDiv {
