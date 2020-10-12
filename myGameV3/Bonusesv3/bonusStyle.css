@@ -50,6 +50,7 @@ html {
     font-size: 3em;
     margin-left: 100px;
     color: blue;
+    border: 6px solid gray
 }
 
 #counterDiv {
@@ -60,11 +61,11 @@ html {
 
 #sound {
     padding: 50px;
+    position: absolute;
+    bottom: 40%;
 }
 
 #scoreKeeper {
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     font-size: 2em;
     font-family: 'Sansita Swashed', cursive;
     height: 400px;
@@ -74,4 +75,9 @@ html {
     background-color: gray;
     margin: 0 auto;
     position: absolute;
+    border: 6px solid blue
+}
+
+#winCount {
+    width: 100%
 }

@@ -18,7 +18,9 @@ const chooseX = document.querySelector('#chooseX') //X button
 const chooseO = document.querySelector('#chooseO') //O button
 const choiceButtons = document.querySelectorAll('.XorObutton'); //Selector for both buttons
 const indBoxes = Array.from(document.querySelectorAll('.gameBox')) // Individual Game boxes array
-
+const scoreKeeper = document.querySelector('#scoreKeeper')
+const xWinCount = document.querySelector('#xWinCount')
+const oWinCount = document.querySelector('#oWinCount')
 
 let counter = 0
 
@@ -65,6 +67,8 @@ const fillInBoxes = () => {
 
 
 const winCheckTrack = () => {
+    let numXWins = xWinCount.innerHTML;
+    let numOWins = oWinCount.innerHTML;
 
     if ((gameBoxes[0].innerHTML === "X" && gameBoxes[1].innerHTML === "X" && gameBoxes[2].innerHTML === "X") ||
         (gameBoxes[3].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[5].innerHTML === "X") ||
@@ -76,10 +80,11 @@ const winCheckTrack = () => {
         (gameBoxes[0].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
         (gameBoxes[2].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[6].innerHTML === "X")) {
         alert("game over X wins!")
+        numXWins++;
+        xWinCount.innerHTML = numXWins;
         gameBoxes.forEach(box => {
             box.innerHTML = ""
             counterDiv.innerHTML = ""
-
             counter = 0
         })
     } else if ((gameBoxes[0].innerHTML === "O" && gameBoxes[1].innerHTML === "O" && gameBoxes[2].innerHTML === "O") ||
@@ -94,10 +99,12 @@ const winCheckTrack = () => {
 
     {
         alert("game over O wins!")
-            // gameBoxes.forEach(box => {
+        numOWins++;
+        oWinCount.innerHTML = numOWins;
         gameBoxes.forEach(box => {
             box.innerHTML = ""
             counterDiv.innerHTML = ""
+
             counter = 0
         })
 
@@ -111,6 +118,8 @@ const winCheckTrack = () => {
     }
 
 }
+
+
 
 indBoxes.forEach(box => {
 
