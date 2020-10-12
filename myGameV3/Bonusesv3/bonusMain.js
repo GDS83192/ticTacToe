@@ -76,7 +76,7 @@ const winCheckTrack = () => {
         (gameBoxes[0].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
         (gameBoxes[0].innerHTML === "X" && gameBoxes[3].innerHTML === "X" && gameBoxes[6].innerHTML === "X") ||
         (gameBoxes[1].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[7].innerHTML === "X") ||
-        (gameBoxes[2].innerHTML === "X" && gameBoxes[6].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
+        (gameBoxes[2].innerHTML === "X" && gameBoxes[5].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
         (gameBoxes[0].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[8].innerHTML === "X") ||
         (gameBoxes[2].innerHTML === "X" && gameBoxes[4].innerHTML === "X" && gameBoxes[6].innerHTML === "X")) {
         alert("game over X wins!")
@@ -93,7 +93,7 @@ const winCheckTrack = () => {
         (gameBoxes[0].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
         (gameBoxes[0].innerHTML === "O" && gameBoxes[3].innerHTML === "O" && gameBoxes[6].innerHTML === "O") ||
         (gameBoxes[1].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[7].innerHTML === "O") ||
-        (gameBoxes[2].innerHTML === "O" && gameBoxes[6].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
+        (gameBoxes[2].innerHTML === "O" && gameBoxes[5].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
         (gameBoxes[0].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[8].innerHTML === "O") ||
         (gameBoxes[2].innerHTML === "O" && gameBoxes[4].innerHTML === "O" && gameBoxes[6].innerHTML === "O"))
 
