@@ -34,23 +34,33 @@ const startGame = () => { // click Start. Says "Begin!" if new game indicated by
 
 
 const fillInBoxes = () => {
+
     if (counter % 2 !== 0) {
         if (player1.symbol == "O" && event.target.innerHTML == "") {
             event.target.innerHTML = "X"
-
+            counter++
+            console.log(counter);
         } else if (player1.symbol == "X" && event.target.innerHTML == "") {
             event.target.innerHTML = "O"
-
+            counter++
+            console.log(counter);
+        } else if (event.target !== "") {
+            console.log('no good')
         }
     } else if (counter % 2 == 0) {
         if (player1.symbol == "X" && event.target.innerHTML == "") {
             event.target.innerHTML = "X"
-
+            counter++
+            console.log(counter);
         } else if (player1.symbol == "O" && event.target.innerHTML == "") {
             event.target.innerHTML = "O"
+            counter++
+            console.log(counter);
+        } else if (event.target !== "") {
+            console.log('no good')
+            console.log(counter);
         }
     }
-    counter++
 }
 
 
@@ -106,12 +116,22 @@ indBoxes.forEach(box => {
 
     box.addEventListener('click', fillInBoxes)
     box.addEventListener('click', event => {
+
         if (counter % 2 == 0) {
             counterDiv.innerHTML = "Player 1 Turn"
 
         } else if (counter % 2 !== 0) {
             counterDiv.innerHTML = "Player 2 Turn"
         }
+
+        if (counter % 2 == 0) {
+            counterDiv.innerHTML = "Player 1 Turn"
+
+        } else if (counter % 2 !== 0) {
+            counterDiv.innerHTML = "Player 2 Turn"
+        }
+
+
     })
 })
 

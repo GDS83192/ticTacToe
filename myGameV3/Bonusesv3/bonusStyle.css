@@ -57,3 +57,21 @@ html {
     display: flex;
     justify-content: center;
 }
+
+#sound {
+    padding: 50px;
+}
+
+#scoreKeeper {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    font-size: 2em;
+    font-family: 'Sansita Swashed', cursive;
+    height: 400px;
+    width: 200px;
+    left: 75%;
+    bottom: 25%;
+    background-color: gray;
+    margin: 0 auto;
+    position: absolute;
+}
