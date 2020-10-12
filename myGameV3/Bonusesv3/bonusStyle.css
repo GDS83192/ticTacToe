@@ -68,10 +68,10 @@ html {
 #scoreKeeper {
     font-size: 2em;
     font-family: 'Sansita Swashed', cursive;
-    height: 400px;
+    height: 100px;
     width: 200px;
     left: 75%;
-    bottom: 25%;
+    bottom: 60%;
     background-color: gray;
     margin: 0 auto;
     position: absolute;
