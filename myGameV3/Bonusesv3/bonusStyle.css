@@ -4,6 +4,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    /* Got this from googling best way to make background image look good */
 }
 
 .boardGrid {
@@ -80,4 +81,26 @@ html {
 
 #winCount {
     width: 100%
+}
+
+@media (max-width: 500px) {
+    .boardGrid {
+        width: 300px;
+        height: 300px;
+    }
+    #mainHeading {
+        font-size: 3em;
+    }
+    #startButton {
+        font-size: 30px;
+    }
+    #scoreKeeper {
+        bottom: 30%;
+        width: 25%;
+        height: 20%;
+        font-size: 20px;
+    }
+    #sound {
+        display: none;
+    }
 }
