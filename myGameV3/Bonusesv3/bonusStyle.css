@@ -86,8 +86,7 @@ html {
 
 /* Need to improve height media query*/
 
-@media (max-width: 500px),
-(max-height: 500px) {
+@media (max-width: 500px) {
     .boardGrid {
         width: 300px;
         height: 300px;
