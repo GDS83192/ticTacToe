@@ -45,6 +45,9 @@ html {
     font-family: 'Sansita Swashed', cursive;
     text-align: center;
     font-size: 6em;
+    animation-name: TitleEffect;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 #startButton {
@@ -90,6 +93,24 @@ html {
 
 #winCount {
     width: 100%
+}
+
+
+/* Want to find out how to pick random colors to rotate through */
+
+@keyframes TitleEffect {
+    0% {
+        color: purple;
+    }
+    25% {
+        color: gray;
+    }
+    50% {
+        color: turquoise;
+    }
+    100% {
+        color: red;
+    }
 }
 
 
