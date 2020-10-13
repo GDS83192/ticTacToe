@@ -1,3 +1,33 @@
 1) Article on How often to Commit -- https://softwareengineering.stackexchange.com/questions/74764/how-often-should-i-do-you-make-commits
 
 2) https://www.w3schools.com/tags/att_disabled.asp
+
+3) CSS Image Effects -- https://codepen.io/thebabydino/pen/vyJGl
+
+4) CSS Hover Effects -- https://freefrontend.com/css-image-effects/
+
+5) Media Queries -- https://css-tricks.com/logic-in-media-queries/
+
+6) Control Flow -- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
+
+7) Event Listeners, Propagation and Capturing -- https://gomakethings.com/when-to-use-use-capture-in-your-event-listeners/
+
+8) Info about using events for collecting data -- https://developers.google.com/analytics/devguides/collection/analyticsjs/user-timings
+
+9) Tic Tac Toe AI -- https://github.com/adeelibr/tic-tac-toe-ai-vanilla-js/blob/master/simple/simpleAi.js
+
+10) Disabling Buttons -- https://www.w3schools.com/tags/att_disabled.asp
+
+11)Tutorials of Tic Tac Toe -- https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern?ref=hackernoon.com 
+
+12)Tutorial -- https://www.thatsoftwaredude.com/content/6189/coding-tic-tac-toe-in-javascript 
+
+13) Remove Event Listener () -- https://eloquentjavascript.net/15_event.html'
+
+14) Event Listener Options and {Once: True} -- https://stackoverflow.com/questions/28610365/how-can-i-add-an-event-for-a-one-time-click-to-a-function 
+
+15) Tutorial -- https://hackernoon.com/building-tictactoe-using-vanilla-javascript-kt2b32mp
+
+16) Bootswatch and Minifying CSS -- https://blog.logrocket.com/the-complete-best-practices-for-minifying-css/
+
+17) General CSS Review -- https://shapeshed.com/default-styles-for-css/#have-classes-for-floating-and-clearing
