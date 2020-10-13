@@ -37,7 +37,7 @@ This TicTacToe game solves the problem of two people desiring a friendly competi
 
 ## Brief Example
 
-![screenshot](Images/gameScreenshot.png)
+![screenshot](Images/gameScreenshot2.png)
 
 # List of Features / User Stories
 
