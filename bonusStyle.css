@@ -9,6 +9,14 @@ html {
     /* Got this from googling best way to make background image look good */
 }
 
+td {
+    border: 1px solid black
+}
+
+th {
+    border-top: 1px solid black
+}
+
 .boardGrid {
     width: 600px;
     height: 600px;
